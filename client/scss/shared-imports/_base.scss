@@ -21,14 +21,13 @@ body {
 
 body {
   position: relative; // this is to position the bottom bar
-
   &.panel-open {
     overflow-y: hidden;
   }
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 a, button, input[type="submit"] {
@@ -73,7 +72,7 @@ li {
 }
 
 .danger-block {
-  background-color: $color-danger;
+  background-color: $color-red;
   text-align: center;
   color: $color-white;
   h1, h2, h3, h4, h5 {

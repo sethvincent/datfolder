@@ -1,41 +1,32 @@
-<div class="container">
-  <div class="blog-layout">
-    <div class="post">
-      <div id="post">{{{content}}}</div>
-    </div>
-    <div class="sidebar-list">
-      {{#posts}}
-      {{#if date}}
-        <a class="load-document" href="/blog/{{name}}">
-          <div class="document" id="{{name}}">
-            <h2 class="title f5 lh-title">{{title}}</h2>
-            <div class="f6">
-              <span class="published">{{date}}</span>
-              &bull;
-              <span class="author">{{author}}</span>
-            </div>
-            <div class="f6">
-              {{teaser}}
-            </div>
-          </div>
-        </a>
-      {{/if}}
-      {{/posts}}
-
-      {{#posts}}
-      {{#if date}}
-        <a class="load-document" href="/blog/{{name}}">
-          <div class="document" id="{{name}}">
-            <h2 class="title f5 lh-title">{{title}}</h2>
-            <div class="f6">
-              <span class="published">{{date}}</span>
-              &bull;
-              <span class="author">{{author}}</span>
-            </div>
-          </div>
-        </a>
-      {{/if}}
-      {{/posts}}
-    </div>
+<header class="bg-white">
+  <div class="container">
+    <h1 class="content-title horizontal-rule">Dat Blog</h1>
   </div>
-</div>
+</header>
+
+<section class="section bg-neutral-04">
+  <div class="container">
+    {{#posts}}
+      {{#if date}}
+        <div class="post post--preview">
+          <div class="document" id="{{name}}">
+            <div class="f6 color-neutral-60">
+              <span class="published">{{relativeDate}}</span>
+              by
+              <span class="author">{{author}}</span>
+            </div>
+            <a class="load-document" href="/blog/{{name}}">
+              <h2 class="mt0">{{title}}</h2>
+            </a>
+            <div class="clearfix">
+              <div class="f6 measure-wide">
+                {{{shortContent}}} …
+              </div>
+              <a href="/blog/{{name}}" class="f6 btn btn--green fr">Read more</a>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/posts}}
+  </div>
+</section>

@@ -10,11 +10,17 @@
 @import "~dat-design/scss/base.scss";
 
 @import "shared-imports/variables";
+@import "shared-imports/colors";
+@import "shared-imports/bg-colors";
 @import "shared-imports/base";
 @import "shared-imports/layout";
 @import "shared-imports/grid";
 @import "shared-imports/site-header";
 @import "shared-imports/header-logo";
+@import "shared-imports/sections";
+@import "shared-imports/horizontal-rule";
+@import "shared-imports/block-create";
+@import "shared-imports/screenshot";
 
 @import "includes/footer";
 @import "includes/cli-tutorial";
@@ -26,37 +32,8 @@
 
 @import "shared-imports/tachyons";
 
-.mono {
-  font-family: monospace;
-}
-
-.header-continue {
-  margin: 30px 0 50px;
-}
-
-.content-box {
-  padding: 40px 40px 20px 40px;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  .content-title {
-    line-height: 3.5rem;
-    margin-top: .5rem;
-    padding-top: 0;
-  }
-  iframe {
-    max-width: 480px;
-    width: 100%;
-  }
-}
-
-a {
-  color: $color-info;
+h2, h3 {
   font-weight: 300;
-  text-decoration: none;
-  &:hover, &:focus {
-    color: $color-info-hover;
-    text-decoration: none;
-  }
 }
 
 p {
@@ -84,47 +61,10 @@ ul {
   }
 }
 
-.section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  @media screen and (min-width: $small) {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  @media screen and (min-width: $medium) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-.section--hero {
-  padding-top: 0;
-  padding-bottom: 0;
-  .container {
-    padding-bottom: 2rem;
-  }
-  @media screen and (min-width: $medium) {
-    background-image: url('/public/img/screenshot-dat-desktop.png');
-    background-repeat: no-repeat;
-    background-color: $color-white;
-    background-position: 130% 100%;
-    background-size: 60%;
-  }
-  @media screen and (min-width: 1180px) {
-    background-position: 100% 100%;
-    background-size: 50%;
-    .container {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-  }
-}
-
 .content-title {
   font-size: 2rem;
   font-weight: 700;
-  padding-top: 1rem;
-  padding-bottom: .5rem;
+  margin-bottom: 0;
 }
 .content-subtitle {
   font-size: 1.25rem;
@@ -138,19 +78,7 @@ ul {
     color: $color-neutral-40;
   }
   a {
-    color: $color-info;
-  }
-}
-
-.horizontal-rule {
-  &:after {
-    content: '';
-    display: block;
-    width: 4rem;
-    height: 5px;
-    background-color: $color-neutral-30;
-    margin-top: 1.25rem;
-    margin-bottom: 2rem;
+    color: $color-blue;
   }
 }
 .content-code-intro {

@@ -1,0 +1,12 @@
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @media screen and (min-width: $small) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media screen and (min-width: $medium) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
